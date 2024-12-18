@@ -1,6 +1,5 @@
 /* GLOBAL STYLES
 -------------------------------------------------- */
-
 :root {
     --bg-primary: #6d9f99;
     --bg-primary-dark: #3d9595;
@@ -12,15 +11,73 @@
 /* Padding below the footer and lighter body text */
 
 body {
-    padding-top: 3rem;
+    font-family: "Roboto", serif;
     padding-bottom: 3rem;
-    color: #5a5a5a;
+    color: #000000da;
 }
 
 
 header,
 nav {
     background-color: var(--bg-primary);
+}
+
+header .navbar-brand img {
+    max-width: 100%;
+    width: 300px;
+}
+
+header nav a {
+    color: #FFF;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin: 0 8px;
+}
+
+header nav a:hover {
+    color: var(--bg-secondary-dark);
+}
+
+header .social-links {
+    background-color: #FFF;
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 10px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+footer {
+    background-color: #FFF;
+}
+
+footer .sign {
+    background-color: #FFF;
+    text-align: right;
+}
+
+h2 {
+    font-weight: 300;
+}
+
+h2 strong {
+    font-weight: 800;
+}
+
+.open-sans-500 {
+    font-family: "Open Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+.roboto-medium {
+    font-family: "Roboto", serif;
+    font-weight: 500;
+    font-style: normal;
 }
 
 
