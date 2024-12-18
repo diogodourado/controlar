@@ -13,6 +13,7 @@
 body {
     font-family: "Roboto", serif;
     color: var(--color-secondary);
+    background-color: #f2f3f4;
 }
 
 
@@ -216,14 +217,81 @@ p.feature {
     text-decoration: none;
 }
 
+.contato {
+    margin-top: -200px;
+    background-color: #FFF;
+    padding: 0px;
+    z-index: 10;
+    position: relative;
+}
+
+.contato h1 {
+    background-color: var(--color-primary);
+    color: #FFF;
+    text-align: center;
+    font-weight: 300;
+    border-bottom: 1px solid var(--color-secondary);
+    padding: 20px 0;
+}
+
+.contato h2 {
+    font-size: 2rem;
+    margin-top: 25px;
+}
+
+.contato h3 {
+    font-size: 2rem;
+    color: var(--color-primary-dark);
+    margin-bottom: 25px;
+}
+
+.contato h1 strong {
+    font-weight: 600;
+}
+
+.contato form {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.contato input,
+.contato select {
+    padding: 10px 20px;
+    border: 1px solid #CCC;
+    border-radius: 0px;
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.contato p {
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.contato select {
+    cursor: pointer;
+}
+
+.contato button {
+    background-color: var(--color-primary-dark);
+    color: white;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contato button:hover {
+    background-color: #006F70;
+    /* Cor no hover */
+}
 
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
-
-/* Carousel base class */
-.carousel {
-    margin-bottom: 4rem;
-}
 
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
@@ -233,7 +301,24 @@ p.feature {
 
 /* Declare heights because of positioning of img element */
 .carousel-item {
-    height: 32rem;
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-image: url('../images/arrow-left.png');
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.carousel-control-next-icon {
+    transform: rotate(180deg);
+    margin-bottom: 120px;
 }
 
 .carousel-item>img {
