@@ -22,9 +22,15 @@ nav {
     background-color: var(--color-primary);
 }
 
+header .navbar-brand {
+    width: 300px;
+}
+
+
 header .navbar-brand img {
     max-width: 100%;
-    width: 300px;
+    width: 260px;
+    margin: 10px 0;
 }
 
 header nav a {
@@ -39,13 +45,44 @@ header nav a:hover {
     color: var(--color-secondary-dark);
 }
 
+
 header .social-links {
     background-color: #FFF;
+    color: var(--color-secondary-dark);
     width: 100%;
     margin-bottom: 12px;
     padding: 10px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+}
+
+header .social-links a {
+    color: var(--color-secondary-dark);
+    font-size: 0.8rem;
+    font-weight: 300;
+    text-transform: inherit;
+
+}
+
+header .social-links img {
+    max-height: 25px;
+}
+
+
+header .social-links .flags {
+    width: 110px;
+}
+
+
+header .social-links .flags a {
+    display: contents;
+}
+
+
+
+header .social-links .flags img {
+    max-height: 20px;
+    margin: 0 3px;
 }
 
 footer {
