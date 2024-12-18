@@ -12,7 +12,7 @@
 
 body {
     font-family: "Roboto", serif;
-    color: #000000da;
+    color: var(--color-secondary);
 }
 
 
@@ -90,8 +90,8 @@ footer .sign {
     color: #FFF;
 }
 
-
 h2 {
+    font-size: 2.5rem;
     font-weight: 300;
     margin-bottom: 1em;
 }
@@ -125,14 +125,27 @@ h2 strong {
     /* Aplica o zoom na imagem */
 }
 
-.clientes {
-    color: var(--color-secondary);
+.img-responsive {
+    max-width: 100%;
 }
 
-.clientes img {
-    padding: 20px;
-    max-width: 200px;
-    max-height: 120px;
+.especialistas p {
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+    font-weight: 300;
+}
+
+.especialistas .image-box {
+    width: 95%;
+    height: 270px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../images/example-image.jpg);
+}
+
+.equipamentos {
+    background-color: var(--color-primary);
+    color: #FFF;
 }
 
 /* CUSTOMIZE THE CAROUSEL
