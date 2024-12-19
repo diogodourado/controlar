@@ -30,7 +30,7 @@ header .navbar-brand {
 header .navbar-brand img {
     max-width: 100%;
     width: 260px;
-    margin: 10px 0;
+    margin: 10px 0 6px;
 }
 
 header nav a {
@@ -77,8 +77,6 @@ header .social-links .flags {
 header .social-links .flags a {
     display: contents;
 }
-
-
 
 header .social-links .flags img {
     max-height: 20px;
@@ -204,6 +202,8 @@ p.feature {
     padding: 10px;
     margin: 0 10px;
     color: var(--color-secondary);
+    border-right: 1px solid var(--color-secondary-dark);
+    border-bottom: 1px solid var(--color-secondary-dark);
 }
 
 .equipamentos .box .image-box {
@@ -238,8 +238,7 @@ p.feature {
     margin-right: 6px;
 }
 
-.equipamentos .box a.btn-more {
-    width: 100%;
+a.btn-more {
     padding: 8px;
     background-color: var(--color-primary-dark);
     color: #FFF;
@@ -249,9 +248,13 @@ p.feature {
     text-align: center;
 }
 
-.equipamentos .box a.btn-more:hover {
+a.btn-more:hover {
     background-color: var(--color-secondary);
     text-decoration: none;
+}
+
+.equipamentos a.btn-more {
+    width: 100%;
 }
 
 .contato {
@@ -327,6 +330,14 @@ p.feature {
     /* Cor no hover */
 }
 
+.only-mobile {
+    display: none;
+}
+
+.only-desktop {
+    display: inherit;
+}
+
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
@@ -351,11 +362,12 @@ p.feature {
     height: 50px;
     background-size: contain;
     background-repeat: no-repeat;
+    margin-bottom: 120px;
 }
 
 .carousel-control-next-icon {
     transform: rotate(180deg);
-    margin-bottom: 120px;
+
 }
 
 .carousel-item>img {
@@ -405,6 +417,174 @@ p.feature {
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
+nav .dd-flex {
+    display: flex;
+}
+
+
+@media (max-width: 767px) {
+
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 30px;
+        height: 30px;
+        margin-bottom: 0px;
+    }
+
+    /* Declare heights because of positioning of img element */
+    .carousel-item {
+        height: 350px;
+    }
+
+    header,
+    nav {
+        background-color: #FFF;
+    }
+
+    header .navbar-brand img {
+        max-width: 70%;
+        width: 200px;
+        margin: 10px 0 6px;
+    }
+
+    #navbarCollapse {
+        z-index: 100;
+        position: absolute;
+        left: 0;
+        top: 100px;
+        right: 0;
+        background-color: #006e70be;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 15px 0px 10px 25px;
+        font-size: 1.1rem;
+    }
+
+    .navbar-nav {
+        padding: 10px 0;
+    }
+
+    button.navbar-toggler {
+        position: absolute;
+        top: 30px;
+        right: 20px;
+    }
+
+    .line {
+        margin: 6px 0;
+        width: 30px;
+        height: 5px;
+        background-color: var(--color-secondary-dark);
+    }
+
+    nav .dd-flex {
+        display: inherit !important;
+    }
+
+    .especialistas2 h4 {
+        color: var(--color-primary);
+        font-size: 2rem;
+    }
+
+    .btn-whatsapp {
+        background-color: var(--color-primary-dark);
+        color: #FFF;
+        margin: 0 auto;
+        font-size: 1.2rem;
+        transition: background-color 0.3s ease;
+        padding: 15px 0px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .btn-whatsapp:hover {
+        color: #FFF;
+        background-color: var(--color-secondary);
+    }
+
+    .btn-whatsapp img {
+        max-height: 30px;
+        margin-right: 10px;
+        margin-top: -2px;
+    }
+
+    .btn-youtube {
+        background-color: #ff0000;
+        transition: background-color 0.3s ease;
+        padding: 15px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .btn-youtube:hover {
+        background-color: #ba0000;
+    }
+
+    .btn-youtube img {
+        max-height: 30px;
+    }
+
+
+    .only-mobile {
+        display: inherit;
+    }
+
+    .only-desktop {
+        display: none;
+    }
+
+    header .social-links,
+    .contato,
+    .clientes,
+    .especialistas,
+    footer .menu {
+        display: none !important;
+    }
+
+    footer {
+        background-color: #1e120d;
+    }
+
+    footer h3 {
+        font-weight: 300;
+        font-size: 1.5rem;
+        padding: 20px;
+    }
+
+    header .social-links {
+        display: none !important;
+    }
+
+    .equipamentos .box {
+        margin-bottom: 25px;
+    }
+
+    .equipamentos.py-5 {
+        padding: 15px 0 !important;
+    }
+
+
+    footer .brand img {
+        max-width: 70%;
+        width: 200px;
+        margin: 20px auto 30px;
+    }
+
+
+
+    footer .brand img {
+        max-width: 80%;
+        width: 250px;
+        margin: 20px auto 30px;
+    }
+
+    footer .sign img {
+        height: 30px;
+    }
+}
 
 @media (min-width: 40em) {
 

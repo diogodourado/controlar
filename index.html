@@ -48,10 +48,11 @@
 
         <nav class="navbar navbar-expand-md container p-0">
 
-            <div class="d-flex w-100">
+            <div class="dd-flex w-100">
                 <div>
                     <a class="navbar-brand " href="#">
-                        <img src="images/controlar-logo.png" alt="">
+                        <img src="images/controlar-logo.png" class="only-desktop" alt="">
+                        <img src="images/controlar-logo-mobile.png" class="only-mobile" alt="">
                     </a>
                 </div>
 
@@ -79,7 +80,9 @@
 
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
                         aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
                     </button>
 
 
@@ -179,6 +182,16 @@
 
         </div><!-- /.contato -->
 
+        <div class="especialistas2 p-4 text-center">
+            <h4>Somos especialistas <strong>em Despoeiramento.</strong></h4>
+        </div>
+
+        <div class="only-mobile p-4 text-center bg-white">
+            <a href="#" class="btn btn-whatsapp">
+                <img src="images/ico-whatsapp.png" alt=""> FALE COM UM ESPECIALISTA
+            </a>
+        </div>
+
 
         <div class="container especialistas py-5 mt-5">
 
@@ -260,9 +273,17 @@
                             <a href="#" class="text-uppercase btn-more">Saiba mais</a>
                         </div>
                     </div>
+
+
                 </div>
             </div>
         </div><!-- /.equipamentos -->
+
+        <div class="bg-white p-4 only-mobile">
+            <div class="col-md-12">
+                <a href="#" class="text-uppercase btn-more">veja mais produtos</a>
+            </div>
+        </div>
 
         <div class="container py-5 text-center clientes">
             <h2>Alguns dos <strong>nossos Clientes</strong></h2>
@@ -286,8 +307,26 @@
         <footer class="pt-4 pb-0">
 
             <div class="text-center brand">
-                <img src="images/controlar-logo-black.png" alt="">
+                <a href="./">
+                    <img src="images/controlar-logo-black.png" alt="">
+                </a>
             </div>
+
+            <div class="only-mobile container text-white text-center">
+
+                <h3 class="">Por meio da tecnologia, buscamos apresentar aos clientes soluções inovadoras para
+                    reduzir os
+                    impactos ambientais e promover a sustentabilidade</h4>
+
+                    <a href="#" class="btn btn-whatsapp my-4">
+                        <img src="images/ico-whatsapp.png" alt=""> FALE COM UM ESPECIALISTA
+                    </a>
+
+                    <a href="#" target="_blank" class="btn btn-youtube my-4">
+                        <img src="images/ico-youtube-white.png" alt="">
+                    </a><br>
+            </div>
+
             <div class="menu container d-flex justify-content-between">
 
                 <!-- Links principais -->
@@ -314,7 +353,7 @@
 
                 <section class="social">
                     SIGA-NOS EM NOSSAS<br> REDES SOCIAIS<br>
-                    <img src="images/ico-youtube.png" alt="">
+                    <a href="#" target="_blank"><img src="images/ico-youtube.png" alt=""></a>
                 </section>
 
 
