@@ -409,6 +409,33 @@ a.w-400 {
     width: 400px;
 }
 
+.carousel-control-prev,
+.carousel-control-next {
+    width: inherit;
+}
+
+
+.equipamentos .carousel-control-prev {
+    left: -10px;
+}
+
+
+.equipamentos .carousel-control-next {
+    right: -10px;
+}
+
+
+
+
+.equipamentos .carousel {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.equipamentos .carousel-indicators {
+    bottom: 30px;
+}
+
 
 .equipamentos .btn-box {
     width: 100%;
@@ -702,8 +729,17 @@ nav .dd-flex {
     }
 
     /* Declare heights because of positioning of img element */
-    .carousel-item {
+    #myCarousel .carousel-item {
         height: 350px;
+    }
+
+    .equipamentos .carousel {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .equipamentos .carousel-indicators {
+        bottom: 15px;
     }
 
     header,
