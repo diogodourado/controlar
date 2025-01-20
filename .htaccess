@@ -1,0 +1,20 @@
+RewriteEngine On
+
+# Redireciona URLs amigáveis para .phtml, se o arquivo existir
+RewriteCond %{REQUEST_URI} ^/([^/]+)/?$ 
+RewriteCond %{DOCUMENT_ROOT}/%1.phtml -f
+RewriteRule ^([^/]+)/?$ %1.phtml [L]
+
+# Exibe index.phtml se a URL não contiver um caminho
+RewriteCond %{REQUEST_URI} ^/?$  
+RewriteRule ^ index.phtml [L]
+
+# Exibe 404.phtml se o arquivo não existir e não for uma pasta ou arquivo real
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/404.phtml -f
+RewriteRule . 404.phtml [L]
+
+# Permite acesso a arquivos estáticos como CSS, JS, imagens, etc.
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule . - [L]
