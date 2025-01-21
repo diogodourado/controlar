@@ -10,6 +10,7 @@
 
     <meta name="author" content="Brainatwork TI">
 
+
     <?php
     $currentUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://" . $_SERVER['HTTP_HOST'];
     echo '<base href="' . $currentUrl . '" target="_blank">';
@@ -27,7 +28,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
 
-    <link href="css/main.css?v4=true" rel="stylesheet">
+    <link href="css/main.css?v4=true<?= date("Hisdmy"); ?>" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon-32x32.png" sizes="32x32" />
+
 </head>
 
 <body>
@@ -37,7 +42,7 @@
 
         <nav class="navbar navbar-expand-md container p-0">
 
-            <div class="dd-flex w-100">P
+            <div class="dd-flex w-100">
                 <div>
                     <a class="navbar-brand " href="./">
                         <img src="images/controlar-logo.png" class="only-desktop" alt="">

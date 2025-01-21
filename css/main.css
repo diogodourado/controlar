@@ -151,12 +151,17 @@ header .dropdown-menu {
 
 .breadcrumb {
     padding-top: 80px;
+    background-color: #EFEFEF;
+}
+
+.breadcrumb h1 {
     text-transform: uppercase;
     font-size: 2.2rem;
     font-weight: 300;
     background-color: #EFEFEF;
+    padding: 0;
+    margin: 5px 0;
 }
-
 
 .d-flow {
     display: flow;
@@ -164,8 +169,8 @@ header .dropdown-menu {
 
 
 
-.internal .despoeiramento h1,
-.internal .solucoes h1 {
+.internal .despoeiramento h2,
+.internal .solucoes h2 {
     font-weight: 800;
     margin-bottom: 20px;
 }
@@ -242,6 +247,12 @@ h2 {
 }
 
 h2 strong {
+    font-weight: 800;
+}
+
+
+.internal h2.big {
+    font-size: 2.5rem;
     font-weight: 800;
 }
 
@@ -495,7 +506,6 @@ a.w-400 {
 
 .internal .projetos h2 {
     font-weight: 800;
-    padding-left: 100px !important;
 }
 
 .internal .z-100 {
@@ -745,10 +755,14 @@ nav .dd-flex {
     header,
     nav {
         background-color: #FFF;
+        z-index: 1000;
+    }
+
+    header .navbar-brand {
+        width: auto;
     }
 
     header .navbar-brand img {
-        max-width: 70%;
         width: 200px;
         margin: 10px 0 6px;
     }
@@ -809,6 +823,7 @@ nav .dd-flex {
         position: absolute;
         top: 30px;
         right: 20px;
+        z-index: 1000;
     }
 
     .line {
@@ -900,6 +915,10 @@ nav .dd-flex {
         margin-bottom: -15px;
     }
 
+
+
+
+
     .container .px-5 {
         padding: 0px !important;
     }
@@ -952,7 +971,7 @@ nav .dd-flex {
         font-size: 1.8rem;
     }
 
-    .internal h2 {
+    .internal h3 {
         font-size: 1.6rem;
     }
 
