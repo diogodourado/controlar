@@ -714,6 +714,51 @@ textarea {
     letter-spacing: -.05rem;
 }
 
+.dt-cookie-consent {
+    background-color: rgba(0, 0, 0, 0.95);
+}
+
+.dt-cookiemessage-bottom {
+    bottom: 0;
+    left: 0;
+}
+
+.dt-cookie-consent {
+    width: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 99999;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 1.1em;
+    text-align: center;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3sease-in-out;
+    overflow: hidden;
+}
+
+.dt-cookie-consent a.btn {
+    width: 120px;
+    margin: 0 30px;
+}
+
+.dt-cookie-consent .d-flex {
+    justify-content: center;
+}
+
+.dt-cookie-consent a.reject-cookies {
+    background-color: #186464ab;
+}
+
+.dt-cookie-consent a.reject-cookies:hover {
+    background-color: var(--color-secondary);
+    color: #FFF;
+}
+
+.dt-cookie-consent a.btn {
+    width: 120px;
+    margin: 0 30px;
+}
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
