@@ -34,15 +34,24 @@ include '_header.phtml';
 
                 <select id="produto" name="produto">
                     <option value="" selected disabled>Qual produto você tem interesse?</option>
-                    <option value="produto1">Aspersão em Vias de Rolamento</option>
-                    <option value="produto2">Aspersão em Vagões de Minério</option>
-                    <option value="produto3">Aspersão em Pátios de Minério</option>
-                    <option value="produto4">Lavador de Rodas e de Chassi</option>
-                    <option value="produto5">Aspersão em Britagens</option>
-                    <option value="produto6">Locação de Equipamentos</option>
+                    <option value="produto1">Aspersão em Caçambas de Caminhões</option>
+                    <option value="produto2">Aspersão em Vias de Rolamento</option>
+                    <option value="produto3">Aspersão em Vagões de Minério</option>
+                    <option value="produto4">Aspersão em Pátios de Minério</option>
+                    <option value="produto5">Lavador de Rodas e de Chassi</option>
+                    <option value="produto6">Aspersão em Britagens</option>
+                    <option value="produto7">Locação de Equipamentos</option>
                 </select>
 
-                <input type="tel" placeholder="Como conheceu a controlar? *" name="como_conheceu" required>
+                <select id="como_conheceucomo_conheceu" name="como_conheceu">
+                    <option value="" selected disabled>Como você conheceu a Controlar?</option>
+                    <option value="r1">Pesquisando no Google</option>
+                    <option value="r2">No Linkedin</option>
+                    <option value="r3">No Instagram</option>
+                    <option value="r4">No YouTube</option>
+                    <option value="r5">Em Eventos Comerciais</option>
+                    <option value="r6">Indicação de Terceiros</option>
+                </select>
 
                 <textarea name="texto"
                     placeholder="Detalhe aqui o seu projeto, como os problemas vivenciados e as sua necessidades. Iremos fazer um contato o mais breve possível"
