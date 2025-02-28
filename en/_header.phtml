@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="description" content="<?= $description; ?>">
+    <meta name="keywords" content="<?= $keywords; ?>">
+
+    <meta name="author" content="Agência de Criação & Brainatwork TI">
+
+
+    <?php
+    $currentUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://" . $_SERVER['HTTP_HOST'];
+    echo '<base href="' . $currentUrl . '" target="_blank">';
+    ?>
+
+    <title><?= $title; ?></title>
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+
+    <link href="css/main.css?v4=true<?= date("Hisdmy"); ?>" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon-32x32.png" sizes="32x32" />
+
+</head>
+
+<body>
+    <header>
+
+
+
+        <nav class="navbar navbar-expand-md container p-0">
+
+            <div class="dd-flex w-100">
+                <div>
+                    <a class="navbar-brand " href="./en/" target="_self">
+                        <img src="images/controlar-logo.png" class="only-desktop" alt="Controlar Sistemas logo, specialists in dust suppression and dust control solutions.">
+                        <img src="images/controlar-logo-mobile.png" class="only-mobile" alt="Controlar Sistemas logo, specialists in dust suppression and dust control solutions.">
+                    </a>
+                </div>
+
+                <div class="flex-grow-1 d-flex flex-column justify-content-between">
+
+                    <div class="social-links w-100 d-flex justify-content-between align-items-center">
+
+                        <a href="mailto: comercial@controlarsistemas.com" class="zoom"> <img src="images/ico-emaill.png" alt="">
+                            comercial@controlarsistemas.com
+                        </a>
+                        <a href="#" class="zoom"> <img src="images/ico-time.png" alt="">
+                            Mon-Fri, 8 AM - 6 PM.
+                        </a>
+                        <a href="https://www.youtube.com/@controlarsistemas3442" class="zoom" target="_blank"> <img src="images/ico-youtube.png" alt="">
+                            Visit our YouTube channel
+                        </a>
+
+                        <div class="flags">
+                            <a href="./" target="_self"><img class="zoom" src="images/flag-brasil.png" alt=""></a><a href="./en/" target="_self"><img class="zoom"
+                                    src="images/flag-eua.png" alt=""></a><a href="/es/" target="_self"><img class="zoom" src="images/flag-spain.png"
+                                    alt=""></a>
+                        </div>
+                    </div>
+
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </button>
+
+
+                    <div class="collapse navbar-collapse align-items-end justify-content-between flex-grow-1"
+                        id="navbarCollapse">
+                        <ul class="navbar-nav justify-content-between d-flex flex-grow-1">
+
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link menu-item dropdown-toggle" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">Solutions</a>
+
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="en/dust-suppression-in-crushing-plants/" target="_self">DUST SUPPRESSION IN CRUSHING PLANTS</a>
+                                    <a class="dropdown-item" href="en/dust-suppression-in-truck-buckets/" target="_self">DUST SUPPRESSION IN TRUCK BUCKETS</a>
+                                    <a class="dropdown-item" href="en/dust-suppression-in-ore-yards/" target="_self">DUST SUPPRESSION IN ORE YARDS</a>
+                                    <a class="dropdown-item" href="en/dust-suppression-in-ore-wagons/" target="_self">DUST SUPPRESSION IN ORE WAGONS</a>
+                                    <a class="dropdown-item" href="en/dust-suppression-on-haul-roads/" target="_self">DUST SUPPRESSION ON HAUL ROADS</a>
+                                    <a class="dropdown-item" href="en/wheel-and-chassis-washer/" target="_self">WHEEL AND CHASSIS WASHER</a>
+                                    <a class="dropdown-item" href="en/equipment-rental-for-dust-suppression-and-wheel-washers/" target="_self">EQUIPMENT RENTAL</a>
+                                </div>
+                            </li>
+
+
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link menu-item dropdown-toggle" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">Projects</a>
+
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"> <a
+                                        class="dropdown-item" href="en/innovative-projects/" target="_self">INNOVATIVE PROJECTS</a>
+                                    <a class="dropdown-item" href="en/completed-projects/" target="_self">COMPLETED PROJECTS</a>
+                                </div>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="en/dust-suppression/" target="_self">Dust Suppression</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="en/our-partner-clients/" target="_self">Clients</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="en/about-us/" target="_self">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="en/contact/" target="_self">Contact</a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+        </nav>
+    </header>
+
+
+    <!-- HEADER end -->
