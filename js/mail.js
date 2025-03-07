@@ -30,7 +30,7 @@ $(document).ready(function () {
                         botao.text(textoInicial);
                     },
                     error: function () {
-                        $("#mensagemFeedback").html("Ocorreu um erro ao enviar a mensagem.");
+                        $("#mensagemFeedback").html("<div class='alert alert-danger text-center'>Ocorreu um erro ao enviar a mensagem.</div>");
 
 
                         botao.prop("disabled", false);

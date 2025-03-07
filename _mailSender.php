@@ -9,9 +9,6 @@ require 'modules/vendor/autoload.php';
 header('Content-Type: application/json');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nome = $_POST["nome"];
-    $email = $_POST["email"];
-    $mensagem = $_POST["mensagem"];
 
     $mail = new PHPMailer(true);
 
@@ -77,7 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $erro[] = 'reCAPTCHA - Token não recebido.';
     }
 
-    if ($erro) {
+    if (isset($erro)) {
         $erroLine = '';
         foreach ($erro as $er) {
             $erroLine .= $er . '<br>';
@@ -180,7 +177,7 @@ HTML;
         $message = "<div class='alert alert-success text-center'>Mensagem enviada com sucesso!</div>";
         echo json_encode(['success' => true, 'message' => $message]);
     } catch (Exception $e) {
-        $message = "<div class='alert alert-success text-center'>Erro ao enviar a mensagem: {$mail->ErrorInfo}</div>";
+        $message = "<div class='alert alert-danger text-center'>Erro ao enviar a mensagem: {$mail->ErrorInfo}</div>";
         echo json_encode(['success' => false, 'message' => $message]);
     }
 }

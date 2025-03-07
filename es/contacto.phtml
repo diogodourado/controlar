@@ -22,7 +22,7 @@ include '_header.phtml';
             <h1 class="px-3"><strong>¡Tenemos la mejor solución</strong> para el control de emisión de polvo!</h1>
 
 
-            <form action="#" method="POST">
+            <form id="meuFormulario" action="_mailSender.php" method="POST">
 
                 <h2>¡SOLICITE AQUÍ UN CONTACTO COMERCIAL</h2>
                 <h3><strong>CON UNO DE NUESTROS ESPECIALISTAS!</strong></h3>
@@ -34,34 +34,41 @@ include '_header.phtml';
 
                 <select id="produto" name="produto">
                     <option value="" selected disabled>¿En qué producto está interesado?</option>
-                    <option value="produto1">Aspersión en Cajas de Camiones</option>
-                    <option value="produto2">Aspersión en Vías de Rodamiento</option>
-                    <option value="produto3">Aspersión en Vagones de Mineral</option>
-                    <option value="produto4">Aspersión en Patios de Mineral</option>
-                    <option value="produto5">Lavador de Ruedas y Chasis</option>
-                    <option value="produto6">Aspersión en Trituradoras</option>
-                    <option value="produto7">Alquiler de Equipos</option>
+                    <option value="Aspersión en Cajas de Camiones">Aspersión en Cajas de Camiones</option>
+                    <option value="Aspersión en Vías de Rodamiento">Aspersión en Vías de Rodamiento</option>
+                    <option value="Aspersión en Vagones de Mineral">Aspersión en Vagones de Mineral</option>
+                    <option value="Aspersión en Patios de Mineral">Aspersión en Patios de Mineral</option>
+                    <option value="Lavador de Ruedas y Chasis">Lavador de Ruedas y Chasis</option>
+                    <option value="Aspersión en Trituradoras">Aspersión en Trituradoras</option>
+                    <option value="Alquiler de Equipos">Alquiler de Equipos</option>
                 </select>
 
                 <select id="como_conheceucomo_conheceu" name="como_conheceu">
                     <option value="" selected disabled>¿Cómo conoció a Controlar?</option>
-                    <option value="r1">Buscando en Google</option>
-                    <option value="r2">En LinkedIn</option>
-                    <option value="r3">En Instagram</option>
-                    <option value="r4">En YouTube</option>
-                    <option value="r5">En Eventos Comerciales</option>
-                    <option value="r6">Recomendación de Terceros</option>
+                    <option value="Buscando en Google">Buscando en Google</option>
+                    <option value="En LinkedIn">En LinkedIn</option>
+                    <option value="En Instagram">En Instagram</option>
+                    <option value="En YouTube">En YouTube</option>
+                    <option value="En Eventos Comerciales">En Eventos Comerciales</option>
+                    <option value="Recomendación de Terceros">Recomendación de Terceros</option>
                 </select>
 
                 <textarea name="texto"
                     placeholder="Describa aquí su proyecto, los problemas que ha experimentado y sus necesidades. Nos pondremos en contacto con usted lo antes posible."
                     id=""></textarea>
 
+                <div id="mensagemFeedback"></div>
+
+                <input type="hidden" name="type" value="orcamento" />
+                <input type="hidden" id="recaptchaToken" name="recaptchaToken" value="" />
+
+
                 <div class="d-flex justify-content-between">
                     <p>* Todos los campos son obligatorios</p>
-                    <button type="submit">HABLE CON EL CONSULTOR</button>
+                    <button type="submit" id="meuBotao">HABLE CON EL CONSULTOR</button>
                 </div>
             </form>
+
         </div>
 
 

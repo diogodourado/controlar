@@ -36,10 +36,14 @@ include '_header.phtml';
     </div>
 
 
+
+
     <div class="container contato pb-4">
         <h1><strong>Innovative Solutions</strong> in Dust Suppression and Dust Control.</h1>
 
-        <form action="#" method="POST">
+
+
+        <form id="meuFormulario" action="_mailSender.php" method="POST">
 
             <h2>TALK TO ONE OF OUR SPECIALISTS.</h2>
             <h3><strong>REQUEST A QUOTE HERE!</strong></h3>
@@ -51,30 +55,39 @@ include '_header.phtml';
 
             <select id="produto" name="produto">
                 <option value="" selected disabled>Which product are you interested in?</option>
-                <option value="produto1">Dust Suppression in Truck Buckets</option>
-                <option value="produto2">Dust Suppression on Haul Roads</option>
-                <option value="produto3">Dust Suppression in Ore Wagons</option>
-                <option value="produto4">Dust Suppression in Ore Yards</option>
-                <option value="produto5">Wheel and Chassis Washer</option>
-                <option value="produto6">Dust Suppression in Crushing Plants</option>
-                <option value="produto7">Equipment Rental</option>
+                <option value="Dust Suppression in Truck Buckets">Dust Suppression in Truck Buckets</option>
+                <option value="Dust Suppression on Haul Roads">Dust Suppression on Haul Roads</option>
+                <option value="Dust Suppression in Ore Wagons">Dust Suppression in Ore Wagons</option>
+                <option value="Dust Suppression in Ore Yards">Dust Suppression in Ore Yards</option>
+                <option value="Wheel and Chassis Washer">Wheel and Chassis Washer</option>
+                <option value="Dust Suppression in Crushing Plants">Dust Suppression in Crushing Plants</option>
+                <option value="Equipment Rental">Equipment Rental</option>
             </select>
-            
+
             <select id="como_conheceucomo_conheceu" name="como_conheceu">
-                    <option value="" selected disabled>How did you learn about Controlar?</option>
-                    <option value="r1">Google Search</option>
-                    <option value="r2">On Linkedin</option>
-                    <option value="r3">On Instagram</option>
-                    <option value="r4">On YouTube</option>
-                    <option value="r5">At Trade Events</option>
-                    <option value="r6">Third-Party Recommendation</option>
+                <option value="" selected disabled>How did you learn about Controlar?</option>
+                <option value="Google Search">Google Search</option>
+                <option value="On Linkedin">On Linkedin</option>
+                <option value="On Instagram">On Instagram</option>
+                <option value="On YouTube">On YouTube</option>
+                <option value="At Trade Events">At Trade Events</option>
+                <option value="Third-Party Recommendation">Third-Party Recommendation</option>
             </select>
+
+            <div id="mensagemFeedback"></div>
+
+            <input type="hidden" name="type" value="orcamento" />
+            <input type="hidden" id="recaptchaToken" name="recaptchaToken" value="" />
+
 
             <div class="d-flex justify-content-between">
                 <p>* All fields are required</p>
-                <button type="submit">TALK TO A CONSULTANT</button>
+                <button type="submit" id="meuBotao">TALK TO A CONSULTANT</button>
             </div>
         </form>
+
+
+
 
 
     </div><!-- /.contato -->
