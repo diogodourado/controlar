@@ -39,7 +39,7 @@ include '_header.phtml';
     <div class="container contato pb-4">
         <h1 class="text-left px-5"><strong>Soluções Inovadoras</strong> em Despoeiramento e Controle de Poeira.</h1>
 
-        <form action="#" method="POST">
+        <form id="meuFormulario" action="_mailSender.php" method="POST">
 
             <h2>FALE COM UM DE NOSSOS ESPECIALISTAS.</h2>
             <h3><strong>SOLICITE AQUI UM ORÇAMENTO!</strong></h3>
@@ -51,28 +51,34 @@ include '_header.phtml';
 
             <select id="produto" name="produto">
                 <option value="" selected disabled>Qual produto você tem interesse?</option>
-                <option value="produto1">Aspersão em Caçambas de Caminhões</option>
-                <option value="produto2">Aspersão em Vias de Rolamento</option>
-                <option value="produto3">Aspersão em Vagões de Minério</option>
-                <option value="produto4">Aspersão em Pátios de Minério</option>
-                <option value="produto5">Lavador de Rodas e de Chassi</option>
-                <option value="produto6">Aspersão em Britagens</option>
-                <option value="produto7">Locação de Equipamentos</option>
+                <option value="Aspersão em Caçambas de Caminhões">Aspersão em Caçambas de Caminhões</option>
+                <option value="Aspersão em Vias de Rolamento">Aspersão em Vias de Rolamento</option>
+                <option value="Aspersão em Vagões de Minério">Aspersão em Vagões de Minério</option>
+                <option value="Aspersão em Pátios de Minério">Aspersão em Pátios de Minério</option>
+                <option value="Lavador de Rodas e de Chassi">Lavador de Rodas e de Chassi</option>
+                <option value="Aspersão em Britagens">Aspersão em Britagens</option>
+                <option value="Locação de Equipamentos">Locação de Equipamentos</option>
             </select>
 
             <select id="como_conheceucomo_conheceu" name="como_conheceu">
                 <option value="" selected disabled>Como você conheceu a Controlar?</option>
-                <option value="r1">Pesquisando no Google</option>
-                <option value="r2">No Linkedin</option>
-                <option value="r3">No Instagram</option>
-                <option value="r4">No YouTube</option>
-                <option value="r5">Em Eventos Comerciais</option>
-                <option value="r6">Indicação de Terceiros</option>
+                <option value="Pesquisando no Google<">Pesquisando no Google</option>
+                <option value="No Linkedin">No Linkedin</option>
+                <option value="No Instagram">No Instagram</option>
+                <option value="No YouTube">No YouTube</option>
+                <option value="Em Eventos Comerciais">Em Eventos Comerciais</option>
+                <option value="Indicação de Terceiros">Indicação de Terceiros</option>
             </select>
+
+            <div id="mensagemFeedback"></div>
+
+            <input type="hidden" name="type" value="orcamento" />
+            <input type="hidden" id="recaptchaToken" name="recaptchaToken" value="" />
+
 
             <div class="d-flex justify-content-between">
                 <p>* Todos os campos são obrigatórios</p>
-                <button type="submit">FALE COM O CONSULTOR</button>
+                <button type="submit" id="meuBotao">FALE COM O CONSULTOR</button>
             </div>
         </form>
 
