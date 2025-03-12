@@ -3,6 +3,7 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
+require '_traducao.php';
 require '_config.php';
 require 'modules/vendor/autoload.php';
 
@@ -12,12 +13,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $mail = new PHPMailer(true);
 
-    if (!$_POST["nome"] || trim($_POST["nome"]) == '') $erro[] = 'Você deve informar o nome';
-    if (!$_POST["email"] || trim($_POST["email"]) == '') $erro[] = 'Você deve informar o e-mail';
-    if (!$_POST["telefone"] || trim($_POST["telefone"]) == '') $erro[] = 'Você deve informar o telefone';
+    if (!$_POST["nome"] || trim($_POST["nome"]) == '') $translate['nome_obrigatorio'][LANGUAGE];
+    if (!$_POST["email"] || trim($_POST["email"]) == '') $erro[] = $translate['telefone_obrigatorio'][LANGUAGE];
+    if (!$_POST["telefone"] || trim($_POST["telefone"]) == '') $erro[] = $translate['telefone_obrigatorio'][LANGUAGE];
 
-    if (!$_POST["produto"] || trim($_POST["produto"]) == '') $erro[] = 'Você deve informar o produto do seu interesse';
-    if (!$_POST["como_conheceu"] || trim($_POST["como_conheceu"]) == '') $erro[] = 'Você deve informar o como conheceu a CONTROLAR';
+    if (!$_POST["produto"] || trim($_POST["produto"]) == '') $erro[] = $translate['telefone_obrigatorio'][LANGUAGE];
+    if (!$_POST["como_conheceu"] || trim($_POST["como_conheceu"]) == '') $erro[] = $translate['telefone_obrigatorio'][LANGUAGE];
 
     $body_mail = "Nome: {$_POST["nome"]}<br>E-mail: {$_POST["email"]}<br>Empresa: {$_POST["empresa"]}<br>Telefone: {$_POST["telefone"]}<br><br>Interessado no Produto: {$_POST['produto']}<br><br>Como conheceu: {$_POST['como_conheceu']}";
 
@@ -27,17 +28,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             break;
 
         case 'contato':
-            if (!$_POST["texto"] || trim($_POST["texto"]) == '') $erro[] = 'Você deve digitar os detalhes no campo de mensagem';
+            if (!$_POST["texto"] || trim($_POST["texto"]) == '') $erro[] = $translate['mensagem_obrigatorio'][LANGUAGE];
             $subject = 'Contato #' . date("dmhis") . ' - ' . $_POST['produto'];
             $body_mail .= "<br><br>Mensagem: {$_POST['texto']}";
+
+            foreach ($palavrasProibidas as $palavra) {
+                if (stripos($_POST['message'], $palavra) !== false) {
+                    $erro[] = 'Não é permitido contato com esta finalidade #2';
+                    break;
+                }
+            }
             break;
 
         default:
             $erro[] = 'Erro ao definir tipo da mensagem';
             break;
     }
-
-
 
 
     function verify_recaptcha($token, $secret_key)
@@ -67,11 +73,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($verification_result['success'] && $verification_result['score'] >= 0.5) {
             $success = true;
         } else {
-            $erro[] = 'Erro ao verificar o reCAPTCHA.';
+            $erro[] = $translate['reCAPTCHA_error'][LANGUAGE];
         }
     } else {
         // Token não recebido
-        $erro[] = 'reCAPTCHA - Token não recebido.';
+        $erro[] = $translate['reCAPTCHA_error'][LANGUAGE];
     }
 
     if (isset($erro)) {
@@ -79,7 +85,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         foreach ($erro as $er) {
             $erroLine .= $er . '<br>';
         }
-        $erroLine = "<div class='alert alert-danger'><b>Erro(s) encontrado(s):</b><br>{$erroLine}</div>";
+        $erroLine = "<div class='alert alert-danger'><b>{$translate['mensagem_erro'][LANGUAGE]}:</b><br>{$erroLine}</div>";
         echo json_encode(['success' => false, 'message' => $erroLine]);
         exit;
     }
@@ -174,10 +180,10 @@ HTML;
 
 
         $mail->send();
-        $message = "<div class='alert alert-success text-center'>Mensagem enviada com sucesso!</div>";
+        $message = "<div class='alert alert-success text-center'>{$translate['mensagem_sucesso'][LANGUAGE]}</div>";
         echo json_encode(['success' => true, 'message' => $message]);
     } catch (Exception $e) {
-        $message = "<div class='alert alert-danger text-center'>Erro ao enviar a mensagem: {$mail->ErrorInfo}</div>";
+        $message = "<div class='alert alert-danger text-center'>{$translate['mensagem_erro'][LANGUAGE]}: {$mail->ErrorInfo}</div>";
         echo json_encode(['success' => false, 'message' => $message]);
     }
 }

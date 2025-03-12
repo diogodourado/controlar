@@ -866,8 +866,8 @@ nav .dd-flex {
 
     button.navbar-toggler {
         position: absolute;
-        top: 30px;
-        right: 20px;
+        top: 40px;
+        right: 10px;
         z-index: 1000;
     }
 
@@ -935,12 +935,23 @@ nav .dd-flex {
         display: none;
     }
 
-    header .social-links,
+    header .social-links .zoom,
     .contato,
     .clientes,
     .especialistas,
     footer .menu {
         display: none !important;
+    }
+
+    header .social-links .flags .zoom {
+        display: inline !important;
+        margin: 0 0 0 10px;
+    }
+
+    header .social-links .flags {
+        width: 125px;
+        text-align: right;
+        margin-right: 12px;
     }
 
     .internal .contato {
@@ -1062,10 +1073,6 @@ nav .dd-flex {
         font-weight: 300;
         font-size: 1.5rem;
         padding: 20px;
-    }
-
-    header .social-links {
-        display: none !important;
     }
 
     .equipamentos .box {
